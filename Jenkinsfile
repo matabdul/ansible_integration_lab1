@@ -1,9 +1,9 @@
 pipeline{
-    agent{label 'master'}
+    agent any
     stages{
         stage('Checkout') {
             steps{
-                git branch: 'main', url: 'git@github.com:matabdul/ansible_integration_lab1.git'
+                git branch: 'main', url: 'https://github.com/matabdul/ansible_integration_lab1.git'
             }
         } 
         stage('Setup'){
